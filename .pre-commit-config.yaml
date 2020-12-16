@@ -1,0 +1,69 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-docstring-first
+      - id: check-yaml
+      - id: debug-statements
+      - id: double-quote-string-fixer
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: requirements-txt-fixer
+
+  - repo: local
+    hooks:
+      - id: mypy-check
+        name: mypy-check
+        entry: mypy .
+        language: system
+        pass_filenames: false
+        always_run: true
+
+  - repo: local
+    hooks:
+      - id: flake8-check
+        name: flake8-check
+        entry: flake8
+        language: system
+        pass_filenames: false
+        always_run: true
+
+  - repo: local
+    hooks:
+      - id: autopep8-check
+        name: autopep8-check
+        entry: bash -c 'autopep8 --in-place --recursive --max-line-length 79 .'
+        language: system
+        pass_filenames: false
+        always_run: true
+
+  - repo: local
+    hooks:
+      - id: pylint-check
+        name: pylint-check
+        entry: bash -c 'find . -name "*.py" | xargs pylint'
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
+
+  - repo: local
+    hooks:
+      - id: pytest-check
+        name: pytest-check
+        entry: pytest tests
+        language: system
+        pass_filenames: false
+        always_run: true
+
+  - repo: local
+    hooks:
+      - id: isort-imports
+        name: isort-imports
+        entry: isort .
+        language: system
+        pass_filenames: false
+        always_run: true

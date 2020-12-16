@@ -1,0 +1,16 @@
+autopep8>=1.5.4
+click>=7.1.2
+flake8>=3.8.4
+isort>=5.6.4
+matplotlib>=3.3.2
+mypy>=0.790
+numpy>=1.19.2
+opencv-python>=4.4.0.44
+pillow>=7.2.0
+pre-commit>=2.7.1
+pylint>=2.6.0
+pytest>=6.1.1
+pytest-bdd>=4.0.1
+pytest-cov>=2.10.1
+scikit-image>=0.17.2
+seaborn>=0.11.0
