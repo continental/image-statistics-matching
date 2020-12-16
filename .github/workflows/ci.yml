@@ -32,7 +32,7 @@ jobs:
       - name: Run MyPy
         run: mypy .
       - name: Lint with pylint
-        run: find . -name "*.py" | xargs pylint
+        run: pylint *.py core matching tests utils/cs_conversion utils/*.py
         shell: bash
       - name: Test with pytest
         run: python -m pytest
