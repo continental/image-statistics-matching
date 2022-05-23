@@ -10,6 +10,9 @@ Domain Adaptation for object detection (see the paper for more details). They al
 All software components in this repository were designed with a clear focus on scalability and extensibility, so that new image matching
 operations can be added with minimal effort.
 
+**This repository is not being actively maintained by Continental AG. The code can be used to reproduce the results of the paper.
+For an actively maintained repository we recommend using [https://github.com/aabramovrepo/image-statistics-matching](https://github.com/aabramovrepo/image-statistics-matching).**
+
 ## Installation
 
 ### Requirements
